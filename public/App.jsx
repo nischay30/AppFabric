@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 
-import HomePage from './views/homePage';
-import SecondPage from './views/secondPage';
+import HomePage from './views/HomePage';
+import SecondPage from './views/SecondPage';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Flex from '../node_modules/flexboxgrid/css/flexboxgrid.css';

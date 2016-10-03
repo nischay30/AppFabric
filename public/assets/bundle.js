@@ -62,13 +62,13 @@
 
 	var _reactRouter = __webpack_require__(336);
 
-	var _homePage = __webpack_require__(398);
+	var _HomePage = __webpack_require__(398);
 
-	var _homePage2 = _interopRequireDefault(_homePage);
+	var _HomePage2 = _interopRequireDefault(_HomePage);
 
-	var _secondPage = __webpack_require__(448);
+	var _SecondPage = __webpack_require__(448);
 
-	var _secondPage2 = _interopRequireDefault(_secondPage);
+	var _SecondPage2 = _interopRequireDefault(_SecondPage);
 
 	var _reactTapEventPlugin = __webpack_require__(452);
 
@@ -112,8 +112,8 @@
 							_react2.default.createElement(
 								_reactRouter.Router,
 								{ history: _reactRouter.hashHistory },
-								_react2.default.createElement(_reactRouter.Route, { path: '/', component: _homePage2.default }),
-								_react2.default.createElement(_reactRouter.Route, { path: '/secondpage', component: _secondPage2.default })
+								_react2.default.createElement(_reactRouter.Route, { path: '/', component: _HomePage2.default }),
+								_react2.default.createElement(_reactRouter.Route, { path: '/secondpage', component: _SecondPage2.default })
 							)
 						)
 					)
@@ -34188,13 +34188,13 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _homeAppBar = __webpack_require__(400);
+	var _HomeAppBar = __webpack_require__(400);
 
-	var _homeAppBar2 = _interopRequireDefault(_homeAppBar);
+	var _HomeAppBar2 = _interopRequireDefault(_HomeAppBar);
 
-	var _helloButton = __webpack_require__(444);
+	var _HelloButton = __webpack_require__(444);
 
-	var _helloButton2 = _interopRequireDefault(_helloButton);
+	var _HelloButton2 = _interopRequireDefault(_HelloButton);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -34219,11 +34219,11 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(_homeAppBar2.default, null),
+					_react2.default.createElement(_HomeAppBar2.default, null),
 					_react2.default.createElement(
 						'div',
 						{ className: 'row center-xs' },
-						_react2.default.createElement(_helloButton2.default, null)
+						_react2.default.createElement(_HelloButton2.default, null)
 					)
 				);
 			}
@@ -38860,9 +38860,9 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _redirectHomeButton = __webpack_require__(450);
+	var _RedirectHomeButton = __webpack_require__(450);
 
-	var _redirectHomeButton2 = _interopRequireDefault(_redirectHomeButton);
+	var _RedirectHomeButton2 = _interopRequireDefault(_RedirectHomeButton);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -38884,7 +38884,7 @@
 		_createClass(SecondPage, [{
 			key: 'render',
 			value: function render() {
-				return _react2.default.createElement(_redirectHomeButton2.default, null);
+				return _react2.default.createElement(_RedirectHomeButton2.default, null);
 			}
 		}]);
 

@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import RedirectHomeButton from '../../components/redirectHomeButton';
+import RedirectHomeButton from '../../components/RedirectHomeButton';
 
 class SecondPage extends React.Component{
 

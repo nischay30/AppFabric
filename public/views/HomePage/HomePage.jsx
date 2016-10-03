@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 
-import HomeAppBar from '../../components/homeAppBar';
-import HelloButton from '../../components/helloButton';
+import HomeAppBar from '../../components/HomeAppBar';
+import HelloButton from '../../components/HelloButton';
 
 class HomePage extends React.Component{
 

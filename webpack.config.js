@@ -1,8 +1,10 @@
 var path = require("path");
 module.exports = {
-	entry:'./public/components/index.jsx',
+	entry:'./public/App.jsx',
 	output : {
-		path: './public',
+
+		path: path.resolve(__dirname, "public/assets"),
+		publicPath: "/assets/",
 		filename: "bundle.js"
 	},
 	module:{
@@ -16,5 +18,8 @@ module.exports = {
 		},
 		{ test: /\.css$/, loader: "style-loader!css-loader" }
 		]
+	},
+	resolve: {
+		extensions:['','.js','.jsx','/index','/index.js','/index.jsx']
 	}
 };

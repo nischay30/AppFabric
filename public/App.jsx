@@ -5,6 +5,8 @@ import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 're
 
 import HomePage from './views/HomePage';
 import SecondPage from './views/SecondPage';
+import ReplicationPage from './views/ReplicationPage';
+
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Flex from '../node_modules/flexboxgrid/css/flexboxgrid.css';
@@ -15,16 +17,18 @@ class App extends React.Component{
 
 	render(){
 		return(
-				<div>
-				<MuiThemeProvider>
-				<div>
-				<Router history={hashHistory}>
-				<Route path='/' component={HomePage}/>
-				<Route path='/secondpage' component={SecondPage} />
-				</Router>
-				</div>
-				</MuiThemeProvider>
-				</div>
+			<div>
+			<MuiThemeProvider>
+			<div>
+			<Router history={hashHistory}>
+			<Route path='/' component={HomePage}/>
+			<Route path='/secondpage' component={SecondPage} />
+			<Route path='/replicationpage' component={ReplicationPage} />
+			
+			</Router>
+			</div>
+			</MuiThemeProvider>
+			</div>
 			);
 	}
 };

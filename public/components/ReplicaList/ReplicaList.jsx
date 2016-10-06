@@ -1,61 +1,56 @@
 import React,{Component} from 'react';
 import {List, ListItem} from 'material-ui/List';
 import Dialog from 'material-ui/Dialog';
-import {Card, CardHeader, CardText} from 'material-ui/Card';
+import {Card, CardHeader, CardText,CardActions} from 'material-ui/Card';
 import FlatButton from 'material-ui/FlatButton';
+import Divider from 'material-ui/Divider';
 import RaisedButton from 'material-ui/RaisedButton';
 import Paper from 'material-ui/Paper';
+import Badge from 'material-ui/Badge';
 import Logs from '../Logs';
 
 class ReplicaList extends React.Component
 {
-  state= {expanded:false,open:false,};
+ state= {open:false,};
 
-  handleExpandChange = (expanded) => {
-    this.setState({expanded: expanded});
-  };
-
-  handleClose = () => {
-    this.setState({open:false,expanded:false});
-  };
-
-  handleOpen = () => {
-    this.setState({open:true});
-  };
-
-
-  render(){
-   const actions=[
-   <RaisedButton label="close" secondary={true} onTouchTap={this.handleClose} />
-   ];
-
-    const style = {
-     height: 'auto',
-     width: '100%',
-     textAlign:'left',
-     display: 'inline-block',
-   };
-  
-    return( 
-     <Card expanded={this.state.expanded} onExpandChange={this.handleExpandChange}>
-     <CardHeader
-     title={this.props.mappedData.name}
-     actAsExpander={true}
-     showExpandableButton={true}
-     style={{fontWeight:'bold'}}
-     />
-     <CardText expandable={true}>
-     <List>
-     <ListItem key={1} primaryText={"Ip:"+this.props.mappedData.ip} />
-     <ListItem key={2} primaryText={"Status:"+this.props.mappedData.status} />
-     <ListItem key={3} rightIcon={<FlatButton label="Logs" secondary={true} onTouchTap={this.handleOpen}>
-     <Dialog title="Logs" actions={actions} modal={false} open={this.state.open} onRequestClose={this.handleClose} ><Logs /></Dialog>
-     </FlatButton>} />
-     </List>
-     </CardText>
-     </Card>
-     );
+ handleClose = () => {
+   this.setState({open:false,expanded:false});
  };
+
+ handleOpen = () => {
+   this.setState({open:true});
+ };
+
+
+ render(){
+  const actions=[
+  <RaisedButton label="close" secondary={true} onTouchTap={this.handleClose} />
+  ];
+
+  return(
+   
+   <Card expanded={true} style={{margin:10,width:300}}>
+    <CardHeader
+    title={this.props.mappedData.name}
+    avatar={<Badge badgeContent={10} primary={true} badgeStyle={{right: 10}}/>}
+    style={{fontWeight:'bold',background:'lightGrey',padding:5,margin:10}}
+    />
+    <CardText expandable={true}>
+    <List>
+    <ListItem key={1} primaryText={"Ip:"+this.props.mappedData.ip} />
+    <ListItem key={2} primaryText={"Status:"+this.props.mappedData.status} />
+    </List>
+    <Divider />
+    </CardText>
+    <CardActions style={{float:'right'}}>
+    <FlatButton label="Logs" secondary={true} onTouchTap={this.handleOpen}>
+    <Dialog title="Logs" actions={actions} modal={false} open={this.state.open} onRequestClose={this.handleClose} ><Logs /></Dialog>
+    </FlatButton>} />
+    </CardActions>
+    </Card>
+  
+    );
+};
 };
 
 export default ReplicaList;

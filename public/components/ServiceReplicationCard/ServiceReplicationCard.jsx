@@ -9,7 +9,7 @@ import Paper from 'material-ui/Paper';
 import Badge from 'material-ui/Badge';
 import Logs from '../Logs';
 
-class ReplicaList extends React.Component
+class ServiceReplicationCard extends React.Component
 {
  state= {open:false,};
 
@@ -28,10 +28,10 @@ class ReplicaList extends React.Component
   ];
 
   return(
-   
-   <Card expanded={true} style={{margin:10,width:300}}>
+   <Card expanded={true} style={{marginLeft:'10px',marginTop:15,width:300}}>
     <CardHeader
     title={this.props.mappedData.name}
+    titleStyle={{fontSize:'24px'}}
     avatar={<Badge badgeContent={10} primary={true} badgeStyle={{right: 10}}/>}
     style={{fontWeight:'bold',background:'lightGrey',padding:5,margin:10}}
     />
@@ -48,9 +48,8 @@ class ReplicaList extends React.Component
     </FlatButton>} />
     </CardActions>
     </Card>
-  
     );
 };
 };
 
-export default ReplicaList;
+export default ServiceReplicationCard;

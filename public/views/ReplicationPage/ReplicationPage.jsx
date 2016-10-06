@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
-import Data from '../../components/ReplicaList/Data.jsx';
-import ReplicaNumber from '../../components/ReplicaNumber';
+import ServiceReplicationCluster from '../../components/ServiceReplicationCluster';
+import ServiceReplicationInstances from '../../components/ServiceReplicationInstances';
 import HomeAppBar from '../../components/HomeAppBar';
 import $ from 'jquery';
 
@@ -29,8 +29,8 @@ class ReplicationPage extends React.Component{
 		return(
 				<div>
 				<HomeAppBar />
-				<ReplicaNumber />
-				<Data serviceListData={this.state.data}/>
+				<ServiceReplicationInstances />
+				<ServiceReplicationCluster serviceListData={this.state.data}/>
 				</div>
 				
 			);

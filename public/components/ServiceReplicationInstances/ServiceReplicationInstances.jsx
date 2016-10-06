@@ -33,7 +33,7 @@ class ServiceReplicationInstances extends React.Component
 			</div>
 			<br/>
 
-						<Divider />
+			<Divider />
 
 			</div>
 			</div>

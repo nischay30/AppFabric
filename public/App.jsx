@@ -5,7 +5,8 @@ import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 're
 
 import HomePage from './views/HomePage';
 import ReplicationPage from './views/ReplicationPage';
-
+import NodeDashBoardPage from './views/NodeDashBoardPage';
+import NodeGridListPage from './views/NodeGridListPage';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Flex from '../node_modules/flexboxgrid/css/flexboxgrid.css';
@@ -22,6 +23,9 @@ class App extends React.Component{
 			<Router history={hashHistory}>
 			<Route path='/' component={HomePage}/>
 			<Route path='/replicationpage' component={ReplicationPage} />
+			<Route path='/nodedashboardpage' component={NodeDashBoardPage} />
+			<Route path='/nodedashboardpage/nodegridlist' component={NodeGridListPage} />
+			
 			
 			</Router>
 			</div>

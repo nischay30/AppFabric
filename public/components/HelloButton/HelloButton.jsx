@@ -6,7 +6,7 @@ class HelloButton extends React.Component
 {
 	render(){
 		return(<div className='row center-xs'>
-			<Link to='/replicationpage'>
+			<Link to='/nodedashboardpage'>
 			<RaisedButton 
 			label="Hello World" 
 			primary={true}/>

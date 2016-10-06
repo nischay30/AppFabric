@@ -37,7 +37,7 @@ class ReplicaList extends React.Component
    };
   
     return( 
-      <Card expanded={this.state.expanded} onExpandChange={this.handleExpandChange}>
+     <Card expanded={this.state.expanded} onExpandChange={this.handleExpandChange}>
      <CardHeader
      title={this.props.mappedData.name}
      actAsExpander={true}

@@ -38342,7 +38342,7 @@
 					{ className: 'row center-xs' },
 					_react2.default.createElement(
 						_reactRouter.Link,
-						{ to: '/secondpage' },
+						{ to: '/replicationpage' },
 						_react2.default.createElement(_RaisedButton2.default, {
 							label: 'Hello World',
 							primary: true })

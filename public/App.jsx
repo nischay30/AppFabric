@@ -4,7 +4,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 
 import HomePage from './views/HomePage';
-import SecondPage from './views/SecondPage';
 import ReplicationPage from './views/ReplicationPage';
 
 
@@ -22,7 +21,6 @@ class App extends React.Component{
 			<div>
 			<Router history={hashHistory}>
 			<Route path='/' component={HomePage}/>
-			<Route path='/secondpage' component={SecondPage} />
 			<Route path='/replicationpage' component={ReplicationPage} />
 			
 			</Router>

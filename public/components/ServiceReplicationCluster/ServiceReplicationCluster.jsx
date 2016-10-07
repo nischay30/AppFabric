@@ -11,8 +11,10 @@ class ServiceReplicationCluster extends React.Component
 				);
 		});
 
-		return(<div>
+		return(<div className='row'>
+			<div className='row center-xs'>
 			{content}
+			</div>
 			</div>);
 	};
 };

@@ -3,7 +3,8 @@ import AppBar from 'material-ui/AppBar';
 
 class HomeAppBar extends React.Component{
 	render(){
-		return(<AppBar
+		return(
+			<AppBar
 			title="Title"
 			iconClassNameRight="muidocs-icon-navigation-expand-more"
 			/>);

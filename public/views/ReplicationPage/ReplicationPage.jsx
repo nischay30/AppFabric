@@ -29,10 +29,11 @@ class ReplicationPage extends React.Component{
 		return(
 				<div>
 				<HomeAppBar />
+        <div className='container-fluid'>
 				<ServiceReplicationInstances />
 				<ServiceReplicationCluster serviceListData={this.state.data}/>
         </div>
-				
+        </div>
 			);
 	}
 };

@@ -82,10 +82,6 @@
 
 	var _reactTapEventPlugin2 = _interopRequireDefault(_reactTapEventPlugin);
 
-	var _flexboxgrid = __webpack_require__(527);
-
-	var _flexboxgrid2 = _interopRequireDefault(_flexboxgrid);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34230,11 +34226,7 @@
 					'div',
 					null,
 					_react2.default.createElement(_HomeAppBar2.default, null),
-					_react2.default.createElement(
-						'div',
-						{ className: 'row center-xs' },
-						_react2.default.createElement(_HelloButton2.default, null)
-					)
+					_react2.default.createElement(_HelloButton2.default, null)
 				);
 			}
 		}]);
@@ -38344,10 +38336,10 @@
 			value: function render() {
 				return _react2.default.createElement(
 					'div',
-					{ className: 'row center-xs' },
+					null,
 					_react2.default.createElement(
 						_reactRouter.Link,
-						{ to: '/nodedashboardpage' },
+						{ to: '/replicationpage' },
 						_react2.default.createElement(_RaisedButton2.default, {
 							label: 'Hello World',
 							primary: true })
@@ -39009,12 +39001,8 @@
 
 				return _react2.default.createElement(
 					'div',
-					{ className: 'row' },
-					_react2.default.createElement(
-						'div',
-						{ className: 'row center-xs' },
-						content
-					)
+					null,
+					content
 				);
 			}
 		}]);
@@ -39127,38 +39115,41 @@
 	      var actions = [_react2.default.createElement(_RaisedButton2.default, { label: 'close', secondary: true, onTouchTap: this.handleClose })];
 
 	      return _react2.default.createElement(
-	        _Card.Card,
-	        { expanded: true, style: { marginLeft: '10px', marginTop: 15, width: 300 } },
-	        _react2.default.createElement(_Card.CardHeader, {
-	          title: this.props.mappedData.name,
-	          titleStyle: { fontSize: '24px' },
-	          avatar: _react2.default.createElement(_Badge2.default, { badgeContent: 10, primary: true, badgeStyle: { right: 10 } }),
-	          style: { fontWeight: 'bold', background: 'lightGrey', padding: 5, margin: 10 }
-	        }),
+	        'div',
+	        null,
 	        _react2.default.createElement(
-	          _Card.CardText,
-	          { expandable: true },
+	          _Card.Card,
+	          { expanded: true, style: { marginLeft: '10px', marginTop: '15px', width: '300px' } },
+	          _react2.default.createElement(_Card.CardHeader, {
+	            title: this.props.mappedData.name,
+	            titleStyle: { fontSize: '24px' },
+	            avatar: _react2.default.createElement(_Badge2.default, { badgeContent: 10, primary: true, badgeStyle: { right: '10px' } }),
+	            style: { fontWeight: 'bold', background: 'lightGrey' }
+	          }),
 	          _react2.default.createElement(
-	            _List.List,
-	            null,
-	            _react2.default.createElement(_List.ListItem, { key: 1, primaryText: "Ip:" + this.props.mappedData.ip }),
-	            _react2.default.createElement(_List.ListItem, { key: 2, primaryText: "Status:" + this.props.mappedData.status })
+	            _Card.CardText,
+	            { expandable: true },
+	            _react2.default.createElement(
+	              _List.List,
+	              null,
+	              _react2.default.createElement(_List.ListItem, { key: this.props.mappedData.ip, primaryText: "Ip:" + this.props.mappedData.ip })
+	            ),
+	            _react2.default.createElement(_Divider2.default, null)
 	          ),
-	          _react2.default.createElement(_Divider2.default, null)
+	          _react2.default.createElement(
+	            _Card.CardActions,
+	            null,
+	            _react2.default.createElement(_FlatButton2.default, { label: 'Logs', secondary: true, onTouchTap: this.handleOpen, style: { marginLeft: '70%' } })
+	          )
 	        ),
 	        _react2.default.createElement(
-	          _Card.CardActions,
-	          { style: { float: 'right' } },
-	          _react2.default.createElement(
-	            _FlatButton2.default,
-	            { label: 'Logs', secondary: true, onTouchTap: this.handleOpen },
-	            _react2.default.createElement(
-	              _Dialog2.default,
-	              { title: 'Logs', actions: actions, modal: false, open: this.state.open, onRequestClose: this.handleClose },
-	              _react2.default.createElement(_Logs2.default, null)
-	            )
-	          ),
-	          '} />'
+	          _Dialog2.default,
+	          { title: 'Logs',
+	            actions: actions,
+	            modal: false,
+	            open: this.state.open,
+	            onRequestClose: this.handleClose },
+	          _react2.default.createElement(_Logs2.default, null)
 	        )
 	      );
 	    }
@@ -45016,46 +45007,30 @@
 
 										return _react2.default.createElement(
 													'div',
-													{ className: 'row' },
+													null,
+													_react2.default.createElement(
+																'h2',
+																null,
+																'ServiceName'
+													),
+													_react2.default.createElement(
+																'h3',
+																{ style: { marginTop: '35px' } },
+																'Current Instances:'
+													),
 													_react2.default.createElement(
 																'div',
-																{ className: 'col-xs-12 col-lg-12 col-sm-12' },
+																{ style: { marginBottom: '20px' } },
 																_react2.default.createElement(
-																			'div',
-																			{ className: 'row center-xs' },
-																			_react2.default.createElement(
-																						'h2',
-																						null,
-																						'ServiceName'
-																			)
-																),
-																_react2.default.createElement(
-																			'div',
-																			{ className: 'row' },
-																			_react2.default.createElement(
-																						'div',
-																						{ className: ' col-xs-5 col-sm-8 col-md-8 col-lg-8' },
-																						_react2.default.createElement(
-																									'h3',
-																									{ style: { marginTop: '35px' } },
-																									'Current Instances:'
-																						)
-																			),
-																			_react2.default.createElement(
-																						'div',
-																						{ className: ' col-xs-7 col-sm-4 col-md-4 col-lg-4', style: { marginBottom: '20px' } },
-																						_react2.default.createElement(
-																									'form',
-																									null,
-																									_react2.default.createElement(_TextField2.default, { floatingLabelText: 'Replicas required', required: true,
-																												type: 'number', min: 1, max: 20, style: { width: '80%' } }),
-																									_react2.default.createElement(_RaisedButton2.default, { label: 'Go', type: 'submit', primary: true })
-																						)
-																			)
-																),
-																_react2.default.createElement('br', null),
-																_react2.default.createElement(_Divider2.default, null)
-													)
+																			'form',
+																			null,
+																			_react2.default.createElement(_TextField2.default, { floatingLabelText: 'Replicas required', required: true,
+																						type: 'number', min: 1, max: 20, style: { width: '80%' } }),
+																			_react2.default.createElement(_RaisedButton2.default, { label: 'Go', type: 'submit', primary: true })
+																)
+													),
+													_react2.default.createElement('br', null),
+													_react2.default.createElement(_Divider2.default, null)
 										);
 							}
 				}]);
@@ -55450,7 +55425,7 @@
 	                _react2.default.createElement(
 	                    'div',
 	                    { className: 'row col-xs-12' },
-	                    _react2.default.createElement('img', { src: '/components/NodeDashBoard/nodedashboard.png', style: { width: '50', height: '50', marginTop: '14px', marginLeft: '-370px' } }),
+	                    _react2.default.createElement('img', { src: '/components/NodeDashBoard/nodedashboard.png', style: { width: '50px', height: '50px', marginTop: '14px', marginLeft: '-370px' } }),
 	                    _react2.default.createElement(
 	                        'h2',
 	                        { style: { fontStyle: 'Roboto' } },
@@ -55462,7 +55437,7 @@
 	                    { className: 'row center-lg-4' },
 	                    _react2.default.createElement(
 	                        _Paper2.default,
-	                        { style: { height: '180', width: 480, background: "#E1F5FE" }, zDepth: 1 },
+	                        { style: { height: '180px', width: 480, background: "#E1F5FE" }, zDepth: 1 },
 	                        _react2.default.createElement(
 	                            'h4',
 	                            { style: { padding: '4px', fontStyle: 'Roboto' } },
@@ -55881,6 +55856,10 @@
 
 	var _NodesGridList2 = _interopRequireDefault(_NodesGridList);
 
+	var _jquery = __webpack_require__(498);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -55906,7 +55885,7 @@
 			return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = NodeGridListPage.__proto__ || Object.getPrototypeOf(NodeGridListPage)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
 				data: []
 			}, _this.getData = function () {
-				$.ajax({
+				_jquery2.default.ajax({
 					url: 'http://localhost:3000/data',
 					type: 'GET',
 					datatype: 'JSON',
@@ -55927,7 +55906,7 @@
 				return _react2.default.createElement(
 					'div',
 					null,
-					_react2.default.createElement(NodesGridList, { serviceListData: this.state.data })
+					_react2.default.createElement(_NodesGridList2.default, { serviceListData: this.state.data })
 				);
 			}
 		}]);
@@ -56028,7 +56007,7 @@
 					_react2.default.createElement(
 						_reactRouter.Link,
 						{ to: '/' },
-						_react2.default.createElement(_home2.default, { style: { width: '100', height: '40' } })
+						_react2.default.createElement(_home2.default, { style: { width: '100px', height: '40px' } })
 					),
 					_react2.default.createElement(
 						_GridList.GridList,
@@ -57834,354 +57813,6 @@
 	};
 
 	module.exports = keyOf;
-
-/***/ },
-/* 527 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(528);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(530)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../css-loader/index.js!./flexboxgrid.css", function() {
-				var newContent = require("!!./../../css-loader/index.js!./flexboxgrid.css");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 528 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(529)();
-	// imports
-
-
-	// module
-	exports.push([module.id, "/* Uncomment and set these variables to customize the grid. */\n\n.container-fluid {\n  margin-right: auto;\n  margin-left: auto;\n  padding-right: 2rem;\n  padding-left: 2rem;\n}\n\n.row {\n  box-sizing: border-box;\n  display: -ms-flexbox;\n  display: -webkit-box;\n  display: flex;\n  -ms-flex: 0 1 auto;\n  -webkit-box-flex: 0;\n  flex: 0 1 auto;\n  -ms-flex-direction: row;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  flex-direction: row;\n  -ms-flex-wrap: wrap;\n  flex-wrap: wrap;\n  margin-right: -1rem;\n  margin-left: -1rem;\n}\n\n.row.reverse {\n  -ms-flex-direction: row-reverse;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: reverse;\n  flex-direction: row-reverse;\n}\n\n.col.reverse {\n  -ms-flex-direction: column-reverse;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: reverse;\n  flex-direction: column-reverse;\n}\n\n.col-xs,\n.col-xs-1,\n.col-xs-2,\n.col-xs-3,\n.col-xs-4,\n.col-xs-5,\n.col-xs-6,\n.col-xs-7,\n.col-xs-8,\n.col-xs-9,\n.col-xs-10,\n.col-xs-11,\n.col-xs-12 {\n  box-sizing: border-box;\n  -ms-flex: 0 0 auto;\n  -webkit-box-flex: 0;\n  flex: 0 0 auto;\n  padding-right: 1rem;\n  padding-left: 1rem;\n}\n\n.col-xs {\n  -webkit-flex-grow: 1;\n  -ms-flex-positive: 1;\n  -webkit-box-flex: 1;\n  flex-grow: 1;\n  -ms-flex-preferred-size: 0;\n  flex-basis: 0;\n  max-width: 100%;\n}\n\n.col-xs-1 {\n  -ms-flex-preferred-size: 8.333%;\n  flex-basis: 8.333%;\n  max-width: 8.333%;\n}\n\n.col-xs-2 {\n  -ms-flex-preferred-size: 16.667%;\n  flex-basis: 16.667%;\n  max-width: 16.667%;\n}\n\n.col-xs-3 {\n  -ms-flex-preferred-size: 25%;\n  flex-basis: 25%;\n  max-width: 25%;\n}\n\n.col-xs-4 {\n  -ms-flex-preferred-size: 33.333%;\n  flex-basis: 33.333%;\n  max-width: 33.333%;\n}\n\n.col-xs-5 {\n  -ms-flex-preferred-size: 41.667%;\n  flex-basis: 41.667%;\n  max-width: 41.667%;\n}\n\n.col-xs-6 {\n  -ms-flex-preferred-size: 50%;\n  flex-basis: 50%;\n  max-width: 50%;\n}\n\n.col-xs-7 {\n  -ms-flex-preferred-size: 58.333%;\n  flex-basis: 58.333%;\n  max-width: 58.333%;\n}\n\n.col-xs-8 {\n  -ms-flex-preferred-size: 66.667%;\n  flex-basis: 66.667%;\n  max-width: 66.667%;\n}\n\n.col-xs-9 {\n  -ms-flex-preferred-size: 75%;\n  flex-basis: 75%;\n  max-width: 75%;\n}\n\n.col-xs-10 {\n  -ms-flex-preferred-size: 83.333%;\n  flex-basis: 83.333%;\n  max-width: 83.333%;\n}\n\n.col-xs-11 {\n  -ms-flex-preferred-size: 91.667%;\n  flex-basis: 91.667%;\n  max-width: 91.667%;\n}\n\n.col-xs-12 {\n  -ms-flex-preferred-size: 100%;\n  flex-basis: 100%;\n  max-width: 100%;\n}\n\n.col-xs-offset-1 {\n  margin-left: 8.333%;\n}\n\n.col-xs-offset-2 {\n  margin-left: 16.667%;\n}\n\n.col-xs-offset-3 {\n  margin-left: 25%;\n}\n\n.col-xs-offset-4 {\n  margin-left: 33.333%;\n}\n\n.col-xs-offset-5 {\n  margin-left: 41.667%;\n}\n\n.col-xs-offset-6 {\n  margin-left: 50%;\n}\n\n.col-xs-offset-7 {\n  margin-left: 58.333%;\n}\n\n.col-xs-offset-8 {\n  margin-left: 66.667%;\n}\n\n.col-xs-offset-9 {\n  margin-left: 75%;\n}\n\n.col-xs-offset-10 {\n  margin-left: 83.333%;\n}\n\n.col-xs-offset-11 {\n  margin-left: 91.667%;\n}\n\n.start-xs {\n  -ms-flex-pack: start;\n  -webkit-box-pack: start;\n  justify-content: flex-start;\n  text-align: start;\n}\n\n.center-xs {\n  -ms-flex-pack: center;\n  -webkit-box-pack: center;\n  justify-content: center;\n  text-align: center;\n}\n\n.end-xs {\n  -ms-flex-pack: end;\n  -webkit-box-pack: end;\n  justify-content: flex-end;\n  text-align: end;\n}\n\n.top-xs {\n  -ms-flex-align: start;\n  -webkit-box-align: start;\n  align-items: flex-start;\n}\n\n.middle-xs {\n  -ms-flex-align: center;\n  -webkit-box-align: center;\n  align-items: center;\n}\n\n.bottom-xs {\n  -ms-flex-align: end;\n  -webkit-box-align: end;\n  align-items: flex-end;\n}\n\n.around-xs {\n  -ms-flex-pack: distribute;\n  justify-content: space-around;\n}\n\n.between-xs {\n  -ms-flex-pack: justify;\n  -webkit-box-pack: justify;\n  justify-content: space-between;\n}\n\n.first-xs {\n  -ms-flex-order: -1;\n  -webkit-box-ordinal-group: 0;\n  order: -1;\n}\n\n.last-xs {\n  -ms-flex-order: 1;\n  -webkit-box-ordinal-group: 2;\n  order: 1;\n}\n\n@media only screen and (min-width: 48em) {\n  .container {\n    width: 46rem;\n  }\n\n  .col-sm,\n  .col-sm-1,\n  .col-sm-2,\n  .col-sm-3,\n  .col-sm-4,\n  .col-sm-5,\n  .col-sm-6,\n  .col-sm-7,\n  .col-sm-8,\n  .col-sm-9,\n  .col-sm-10,\n  .col-sm-11,\n  .col-sm-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-sm {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-sm-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-sm-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-sm-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-sm-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-sm-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-sm-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-sm-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-sm-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-sm-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-sm-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-sm-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-sm-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-sm-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-sm-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-sm-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-sm-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-sm-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-sm-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-sm-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-sm-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-sm-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-sm-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-sm-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-sm {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-sm {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-sm {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-sm {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-sm {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-sm {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-sm {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-sm {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-sm {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-sm {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n\n@media only screen and (min-width: 62em) {\n  .container {\n    width: 61rem;\n  }\n\n  .col-md,\n  .col-md-1,\n  .col-md-2,\n  .col-md-3,\n  .col-md-4,\n  .col-md-5,\n  .col-md-6,\n  .col-md-7,\n  .col-md-8,\n  .col-md-9,\n  .col-md-10,\n  .col-md-11,\n  .col-md-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-md {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-md-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-md-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-md-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-md-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-md-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-md-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-md-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-md-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-md-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-md-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-md-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-md-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-md-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-md-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-md-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-md-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-md-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-md-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-md-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-md-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-md-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-md-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-md-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-md {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-md {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-md {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-md {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-md {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-md {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-md {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-md {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-md {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-md {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}\n\n@media only screen and (min-width: 75em) {\n  .container {\n    width: 71rem;\n  }\n\n  .col-lg,\n  .col-lg-1,\n  .col-lg-2,\n  .col-lg-3,\n  .col-lg-4,\n  .col-lg-5,\n  .col-lg-6,\n  .col-lg-7,\n  .col-lg-8,\n  .col-lg-9,\n  .col-lg-10,\n  .col-lg-11,\n  .col-lg-12 {\n    box-sizing: border-box;\n    -ms-flex: 0 0 auto;\n    -webkit-box-flex: 0;\n    flex: 0 0 auto;\n    padding-right: 1rem;\n    padding-left: 1rem;\n  }\n\n  .col-lg {\n    -webkit-flex-grow: 1;\n    -ms-flex-positive: 1;\n    -webkit-box-flex: 1;\n    flex-grow: 1;\n    -ms-flex-preferred-size: 0;\n    flex-basis: 0;\n    max-width: 100%;\n  }\n\n  .col-lg-1 {\n    -ms-flex-preferred-size: 8.333%;\n    flex-basis: 8.333%;\n    max-width: 8.333%;\n  }\n\n  .col-lg-2 {\n    -ms-flex-preferred-size: 16.667%;\n    flex-basis: 16.667%;\n    max-width: 16.667%;\n  }\n\n  .col-lg-3 {\n    -ms-flex-preferred-size: 25%;\n    flex-basis: 25%;\n    max-width: 25%;\n  }\n\n  .col-lg-4 {\n    -ms-flex-preferred-size: 33.333%;\n    flex-basis: 33.333%;\n    max-width: 33.333%;\n  }\n\n  .col-lg-5 {\n    -ms-flex-preferred-size: 41.667%;\n    flex-basis: 41.667%;\n    max-width: 41.667%;\n  }\n\n  .col-lg-6 {\n    -ms-flex-preferred-size: 50%;\n    flex-basis: 50%;\n    max-width: 50%;\n  }\n\n  .col-lg-7 {\n    -ms-flex-preferred-size: 58.333%;\n    flex-basis: 58.333%;\n    max-width: 58.333%;\n  }\n\n  .col-lg-8 {\n    -ms-flex-preferred-size: 66.667%;\n    flex-basis: 66.667%;\n    max-width: 66.667%;\n  }\n\n  .col-lg-9 {\n    -ms-flex-preferred-size: 75%;\n    flex-basis: 75%;\n    max-width: 75%;\n  }\n\n  .col-lg-10 {\n    -ms-flex-preferred-size: 83.333%;\n    flex-basis: 83.333%;\n    max-width: 83.333%;\n  }\n\n  .col-lg-11 {\n    -ms-flex-preferred-size: 91.667%;\n    flex-basis: 91.667%;\n    max-width: 91.667%;\n  }\n\n  .col-lg-12 {\n    -ms-flex-preferred-size: 100%;\n    flex-basis: 100%;\n    max-width: 100%;\n  }\n\n  .col-lg-offset-1 {\n    margin-left: 8.333%;\n  }\n\n  .col-lg-offset-2 {\n    margin-left: 16.667%;\n  }\n\n  .col-lg-offset-3 {\n    margin-left: 25%;\n  }\n\n  .col-lg-offset-4 {\n    margin-left: 33.333%;\n  }\n\n  .col-lg-offset-5 {\n    margin-left: 41.667%;\n  }\n\n  .col-lg-offset-6 {\n    margin-left: 50%;\n  }\n\n  .col-lg-offset-7 {\n    margin-left: 58.333%;\n  }\n\n  .col-lg-offset-8 {\n    margin-left: 66.667%;\n  }\n\n  .col-lg-offset-9 {\n    margin-left: 75%;\n  }\n\n  .col-lg-offset-10 {\n    margin-left: 83.333%;\n  }\n\n  .col-lg-offset-11 {\n    margin-left: 91.667%;\n  }\n\n  .start-lg {\n    -ms-flex-pack: start;\n    -webkit-box-pack: start;\n    justify-content: flex-start;\n    text-align: start;\n  }\n\n  .center-lg {\n    -ms-flex-pack: center;\n    -webkit-box-pack: center;\n    justify-content: center;\n    text-align: center;\n  }\n\n  .end-lg {\n    -ms-flex-pack: end;\n    -webkit-box-pack: end;\n    justify-content: flex-end;\n    text-align: end;\n  }\n\n  .top-lg {\n    -ms-flex-align: start;\n    -webkit-box-align: start;\n    align-items: flex-start;\n  }\n\n  .middle-lg {\n    -ms-flex-align: center;\n    -webkit-box-align: center;\n    align-items: center;\n  }\n\n  .bottom-lg {\n    -ms-flex-align: end;\n    -webkit-box-align: end;\n    align-items: flex-end;\n  }\n\n  .around-lg {\n    -ms-flex-pack: distribute;\n    justify-content: space-around;\n  }\n\n  .between-lg {\n    -ms-flex-pack: justify;\n    -webkit-box-pack: justify;\n    justify-content: space-between;\n  }\n\n  .first-lg {\n    -ms-flex-order: -1;\n    -webkit-box-ordinal-group: 0;\n    order: -1;\n  }\n\n  .last-lg {\n    -ms-flex-order: 1;\n    -webkit-box-ordinal-group: 2;\n    order: 1;\n  }\n}", ""]);
-
-	// exports
-
-
-/***/ },
-/* 529 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 530 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	var stylesInDom = {},
-		memoize = function(fn) {
-			var memo;
-			return function () {
-				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-				return memo;
-			};
-		},
-		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-		}),
-		getHeadElement = memoize(function () {
-			return document.head || document.getElementsByTagName("head")[0];
-		}),
-		singletonElement = null,
-		singletonCounter = 0,
-		styleElementsInsertedAtTop = [];
-
-	module.exports = function(list, options) {
-		if(false) {
-			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-		}
-
-		options = options || {};
-		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-		// tags it will allow on a page
-		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-
-		// By default, add <style> tags to the bottom of <head>.
-		if (typeof options.insertAt === "undefined") options.insertAt = "bottom";
-
-		var styles = listToStyles(list);
-		addStylesToDom(styles, options);
-
-		return function update(newList) {
-			var mayRemove = [];
-			for(var i = 0; i < styles.length; i++) {
-				var item = styles[i];
-				var domStyle = stylesInDom[item.id];
-				domStyle.refs--;
-				mayRemove.push(domStyle);
-			}
-			if(newList) {
-				var newStyles = listToStyles(newList);
-				addStylesToDom(newStyles, options);
-			}
-			for(var i = 0; i < mayRemove.length; i++) {
-				var domStyle = mayRemove[i];
-				if(domStyle.refs === 0) {
-					for(var j = 0; j < domStyle.parts.length; j++)
-						domStyle.parts[j]();
-					delete stylesInDom[domStyle.id];
-				}
-			}
-		};
-	}
-
-	function addStylesToDom(styles, options) {
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			if(domStyle) {
-				domStyle.refs++;
-				for(var j = 0; j < domStyle.parts.length; j++) {
-					domStyle.parts[j](item.parts[j]);
-				}
-				for(; j < item.parts.length; j++) {
-					domStyle.parts.push(addStyle(item.parts[j], options));
-				}
-			} else {
-				var parts = [];
-				for(var j = 0; j < item.parts.length; j++) {
-					parts.push(addStyle(item.parts[j], options));
-				}
-				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-			}
-		}
-	}
-
-	function listToStyles(list) {
-		var styles = [];
-		var newStyles = {};
-		for(var i = 0; i < list.length; i++) {
-			var item = list[i];
-			var id = item[0];
-			var css = item[1];
-			var media = item[2];
-			var sourceMap = item[3];
-			var part = {css: css, media: media, sourceMap: sourceMap};
-			if(!newStyles[id])
-				styles.push(newStyles[id] = {id: id, parts: [part]});
-			else
-				newStyles[id].parts.push(part);
-		}
-		return styles;
-	}
-
-	function insertStyleElement(options, styleElement) {
-		var head = getHeadElement();
-		var lastStyleElementInsertedAtTop = styleElementsInsertedAtTop[styleElementsInsertedAtTop.length - 1];
-		if (options.insertAt === "top") {
-			if(!lastStyleElementInsertedAtTop) {
-				head.insertBefore(styleElement, head.firstChild);
-			} else if(lastStyleElementInsertedAtTop.nextSibling) {
-				head.insertBefore(styleElement, lastStyleElementInsertedAtTop.nextSibling);
-			} else {
-				head.appendChild(styleElement);
-			}
-			styleElementsInsertedAtTop.push(styleElement);
-		} else if (options.insertAt === "bottom") {
-			head.appendChild(styleElement);
-		} else {
-			throw new Error("Invalid value for parameter 'insertAt'. Must be 'top' or 'bottom'.");
-		}
-	}
-
-	function removeStyleElement(styleElement) {
-		styleElement.parentNode.removeChild(styleElement);
-		var idx = styleElementsInsertedAtTop.indexOf(styleElement);
-		if(idx >= 0) {
-			styleElementsInsertedAtTop.splice(idx, 1);
-		}
-	}
-
-	function createStyleElement(options) {
-		var styleElement = document.createElement("style");
-		styleElement.type = "text/css";
-		insertStyleElement(options, styleElement);
-		return styleElement;
-	}
-
-	function createLinkElement(options) {
-		var linkElement = document.createElement("link");
-		linkElement.rel = "stylesheet";
-		insertStyleElement(options, linkElement);
-		return linkElement;
-	}
-
-	function addStyle(obj, options) {
-		var styleElement, update, remove;
-
-		if (options.singleton) {
-			var styleIndex = singletonCounter++;
-			styleElement = singletonElement || (singletonElement = createStyleElement(options));
-			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-		} else if(obj.sourceMap &&
-			typeof URL === "function" &&
-			typeof URL.createObjectURL === "function" &&
-			typeof URL.revokeObjectURL === "function" &&
-			typeof Blob === "function" &&
-			typeof btoa === "function") {
-			styleElement = createLinkElement(options);
-			update = updateLink.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-				if(styleElement.href)
-					URL.revokeObjectURL(styleElement.href);
-			};
-		} else {
-			styleElement = createStyleElement(options);
-			update = applyToTag.bind(null, styleElement);
-			remove = function() {
-				removeStyleElement(styleElement);
-			};
-		}
-
-		update(obj);
-
-		return function updateStyle(newObj) {
-			if(newObj) {
-				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-					return;
-				update(obj = newObj);
-			} else {
-				remove();
-			}
-		};
-	}
-
-	var replaceText = (function () {
-		var textStore = [];
-
-		return function (index, replacement) {
-			textStore[index] = replacement;
-			return textStore.filter(Boolean).join('\n');
-		};
-	})();
-
-	function applyToSingletonTag(styleElement, index, remove, obj) {
-		var css = remove ? "" : obj.css;
-
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = replaceText(index, css);
-		} else {
-			var cssNode = document.createTextNode(css);
-			var childNodes = styleElement.childNodes;
-			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-			if (childNodes.length) {
-				styleElement.insertBefore(cssNode, childNodes[index]);
-			} else {
-				styleElement.appendChild(cssNode);
-			}
-		}
-	}
-
-	function applyToTag(styleElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-
-		if(media) {
-			styleElement.setAttribute("media", media)
-		}
-
-		if(styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = css;
-		} else {
-			while(styleElement.firstChild) {
-				styleElement.removeChild(styleElement.firstChild);
-			}
-			styleElement.appendChild(document.createTextNode(css));
-		}
-	}
-
-	function updateLink(linkElement, obj) {
-		var css = obj.css;
-		var sourceMap = obj.sourceMap;
-
-		if(sourceMap) {
-			// http://stackoverflow.com/a/26603875
-			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-		}
-
-		var blob = new Blob([css], { type: "text/css" });
-
-		var oldSrc = linkElement.href;
-
-		linkElement.href = URL.createObjectURL(blob);
-
-		if(oldSrc)
-			URL.revokeObjectURL(oldSrc);
-	}
-
 
 /***/ }
 /******/ ]);

@@ -8,9 +8,7 @@ class HomePage extends React.Component{
 	render(){
 		return(<div>
 				<HomeAppBar />
-				<div className='row center-xs'>
 				<HelloButton />
-				</div>
 				</div>
 			);
 	}

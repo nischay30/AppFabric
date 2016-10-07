@@ -5,8 +5,8 @@ import {Link} from 'react-router';
 class HelloButton extends React.Component
 {
 	render(){
-		return(<div className='row center-xs'>
-			<Link to='/nodedashboardpage'>
+		return(<div>
+			<Link to='/replicationpage'>
 			<RaisedButton 
 			label="Hello World" 
 			primary={true}/>

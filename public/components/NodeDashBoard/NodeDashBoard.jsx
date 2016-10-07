@@ -12,15 +12,11 @@ class NodeDashBoard extends React.Component
 {
  render(){
     return(<div>
-        <div className="row col-xs-12">
         <img src="/components/NodeDashBoard/nodedashboard.png" style={{width:'50px', height:'50px',marginTop: '14px',marginLeft: '-370px'}} />
         <h2 style={{fontStyle: 'Roboto'}}>Node Dashboard</h2>
-        </div>
 
-        <div className="row center-lg-4">
         <Paper  style={{height: '180px', width:480,background:"#E1F5FE"}} zDepth={1} ><h4 style={{padding: '4px',fontStyle: 'Roboto'}}><ActionInfo style={{marginLeft: '30px'}}/>A node is an individual Linux host used to deploy and run your applications.A node cluster is a collection of nodes in the same provider and region of the same type.</h4>
         </Paper>
-        </div>
         <Link to='/nodedashboardpage/nodegridlist'>
         <RaisedButton backgroundColor="#a4c639" label="Bring your own node" style={{marginTop: '10px',fontStyle: 'Roboto'}}><ContentAdd /></RaisedButton>
         </Link><br />

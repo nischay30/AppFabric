@@ -28,26 +28,33 @@ class ServiceReplicationCard extends React.Component
   ];
 
   return(
-   <Card expanded={true} style={{marginLeft:'10px',marginTop:15,width:300}}>
+    <div>
+    <Card expanded={true} style={{marginLeft:'10px',marginTop:'15px',width:'300px'}}>
     <CardHeader
     title={this.props.mappedData.name}
     titleStyle={{fontSize:'24px'}}
-    avatar={<Badge badgeContent={10} primary={true} badgeStyle={{right: 10}}/>}
-    style={{fontWeight:'bold',background:'lightGrey',padding:5,margin:10}}
+    avatar={<Badge badgeContent={10} primary={true} badgeStyle={{right:'10px'}}/>}
+    style={{fontWeight:'bold',background:'lightGrey'}}
     />
     <CardText expandable={true}>
     <List>
-    <ListItem key={1} primaryText={"Ip:"+this.props.mappedData.ip} />
-    <ListItem key={2} primaryText={"Status:"+this.props.mappedData.status} />
+    <ListItem key={this.props.mappedData.ip} primaryText={"Ip:"+this.props.mappedData.ip} />
     </List>
     <Divider />
     </CardText>
-    <CardActions style={{float:'right'}}>
-    <FlatButton label="Logs" secondary={true} onTouchTap={this.handleOpen}>
-    <Dialog title="Logs" actions={actions} modal={false} open={this.state.open} onRequestClose={this.handleClose} ><Logs /></Dialog>
-    </FlatButton>} />
+    <CardActions>
+    <FlatButton label="Logs" secondary={true} onTouchTap={this.handleOpen} style={{marginLeft:'70%'}}/>
     </CardActions>
     </Card>
+
+    <Dialog title="Logs" 
+    actions={actions} 
+    modal={false} 
+    open={this.state.open} 
+    onRequestClose={this.handleClose} >
+    <Logs />
+    </Dialog>
+    </div>
     );
 };
 };

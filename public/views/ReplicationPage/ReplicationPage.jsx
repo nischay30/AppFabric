@@ -31,7 +31,7 @@ class ReplicationPage extends React.Component{
 				<HomeAppBar />
 				<ServiceReplicationInstances />
 				<ServiceReplicationCluster serviceListData={this.state.data}/>
-				</div>
+        </div>
 				
 			);
 	}

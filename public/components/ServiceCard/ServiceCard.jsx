@@ -22,10 +22,9 @@ class ServiceCard extends React.Component
       display:'block-inline'
     }
     return(
+      <span>
       <Link to='/replicationpage' style={{textDecoration:'none'}}>
-      
       <Avatar
-
       color={white000}
       backgroundColor={colour[i]}
       size={70}
@@ -34,6 +33,7 @@ class ServiceCard extends React.Component
       {this.props.value.name} 
       </Avatar>
       </Link>
+      </span>
       );
   }
 }

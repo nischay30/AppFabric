@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import {Link} from 'react-router';
 import $ from 'jquery';
+import ActionHome from 'material-ui/svg-icons/action/home';
 import Divider from 'material-ui/Divider';
 import ServiceCard from '../ServiceCard';
 
@@ -13,14 +14,19 @@ class ServiceList extends React.Component
    });
     return(<div>
       <div className='row'>
-      <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRNAKayx28PcYj8dTzqF4jo48tQ5zXomWXF93CQWbVsGNBmtdSE9A" style={{width:'50px',height:'50px',marginTop:'14px'}} />
-      <h2 >
-      Service DashBoard
-      </h2>
-      <Divider />
+      <ActionHome color='black' hoverColor='#F44336' style={{height:'50px',width:'50px'}}/>
+       </div>
+       <div className='row center-xs'>
+      <h2>AppName</h2>
       </div>
+      <div className='row'>
+      <div className='col-xs-offset-1 col-lg-10 col-sm-10 col-xs-10'>
+
       <div className='row center-xs'>
+
       {servicecard}
+      </div>
+      </div>
       </div>
       </div>
       );		

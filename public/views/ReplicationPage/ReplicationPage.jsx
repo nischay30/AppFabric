@@ -27,7 +27,7 @@ class ReplicationPage extends React.Component{
   }
  	render(){
 		return(
-				<div>
+				<div >
 				<HomeAppBar />
         <div className='container-fluid'>
 				<ServiceReplicationInstances />

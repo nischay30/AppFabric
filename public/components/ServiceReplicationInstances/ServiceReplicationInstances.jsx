@@ -11,7 +11,7 @@ class ServiceReplicationInstances extends React.Component
 
 		return(<div className='row'>
 			<div className='col-xs-12 col-lg-12 col-sm-12'>
-			<Link to='/'>
+			<Link to='/services'>
 			<ArrowBack color='#F44336' hoverColor='#4CAF50' style={{height:'50px',width:'50px'}} />
 			</Link>
 			<div className='row center-xs'>

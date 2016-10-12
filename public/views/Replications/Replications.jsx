@@ -4,7 +4,7 @@ import ServiceReplicationInstances from '../../components/ServiceReplicationInst
 import HomeAppBar from '../../components/HomeAppBar';
 import $ from 'jquery';
 
-class ReplicationPage extends React.Component{
+class Replications extends React.Component{
 
 	state={
 		data:[]
@@ -38,4 +38,4 @@ class ReplicationPage extends React.Component{
 	}
 };
 
-export default ReplicationPage;
+export default Replications;

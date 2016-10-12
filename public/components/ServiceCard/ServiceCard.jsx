@@ -1,29 +1,29 @@
 import React,{Component} from 'react';
 import Avatar from 'material-ui/Avatar';
-import {blue300,indigo900,orange200,deepOrange300,pink400,white000,purple500,cyan500,green300} from 'material-ui/styles/colors';
+import {red300,grey400,orange200,cyan300,brown200,lightBlue300,deepOrangeA100,lightGreen400,amberA200,lime500,white000} from 'material-ui/styles/colors';
 import {Link} from 'react-router';
 
 
-var colour=[blue300,indigo900,orange200,deepOrange300,pink400,green300,purple500,cyan500];
+var colour=[red300,grey400,orange200,cyan300,brown200,lightBlue300,deepOrangeA100,lightGreen400,amberA200,lime500];
 var i=0;
 class ServiceCard extends React.Component
 {
 
   render(){
     i++;
-    if(i==8)
+    if(i==10)
       i=0;
     const style={
       height:100,
       width:250,
-      marginLeft:7,
+      marginLeft:30,
       marginTop:80,
       paddingTop:50,
       display:'block-inline'
     }
     return(
       <span>
-      <Link to='/replicationpage' style={{textDecoration:'none'}}>
+      <Link to='/services/replication' style={{textDecoration:'none'}}>
       <Avatar
       color={white000}
       backgroundColor={colour[i]}

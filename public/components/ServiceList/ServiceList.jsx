@@ -14,10 +14,12 @@ class ServiceList extends React.Component
    });
     return(<div>
       <div className='row'>
+      <Link to='/'>
       <ActionHome color='black' hoverColor='#F44336' style={{height:'50px',width:'50px'}}/>
+      </Link>
        </div>
        <div className='row center-xs'>
-      <h2>AppName</h2>
+      <h1>AppName</h1>
       </div>
       <div className='row'>
       <div className='col-xs-offset-1 col-lg-10 col-sm-10 col-xs-10'>

@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Router, Route, Link, IndexRoute, hashHistory, browserHistory } from 'react-router';
 
-import HomePage from './views/HomePage';
-import ReplicationPage from './views/ReplicationPage';
+import Services from './views/Services';
+import Replications from './views/Replications';
+import Apps from './views/Apps';
 import NodeDashBoardPage from './views/NodeDashBoardPage';
 import NodeGridListPage from './views/NodeGridListPage';
 
@@ -21,8 +22,12 @@ class App extends React.Component{
 			<MuiThemeProvider>
 			<div>
 			<Router history={hashHistory}>
-			<Route path='/' component={HomePage}/>
-			<Route path='/replicationpage' component={ReplicationPage} />
+			<Route path='/' component={Apps}/>
+
+			<Route path='/services' component={Services} />
+			<Route path='/services/replication' component={Replications} />
+			
+			
 			<Route path='/nodedashboardpage' component={NodeDashBoardPage} />
 			<Route path='/nodedashboardpage/nodegridlist' component={NodeGridListPage} />
 			

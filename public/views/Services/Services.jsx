@@ -5,7 +5,7 @@ import HomeAppBar from '../../components/HomeAppBar';
 import ServiceList from '../../components/ServiceList';
 
 
-class HomePage extends React.Component{
+class Services extends React.Component{
 
 	state={
 		serviceData:[]
@@ -39,4 +39,4 @@ class HomePage extends React.Component{
 	}
 };
 
-export default HomePage;
+export default Services;

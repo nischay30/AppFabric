@@ -12,7 +12,7 @@ class ReplicationPage extends React.Component{
 
   getData = () => {
     $.ajax({
-      url:'http://localhost:3000/data',
+      url:'http://localhost:3000/replica',
       type:'GET',
       datatype:'JSON',
       success: function(data){

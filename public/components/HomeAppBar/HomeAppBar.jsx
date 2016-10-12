@@ -5,7 +5,7 @@ class HomeAppBar extends React.Component{
 	render(){
 		return(
 			<AppBar
-			title="Title"
+			title="App Fabric"
 			iconClassNameRight="muidocs-icon-navigation-expand-more"
 			/>);
 	}

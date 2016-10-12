@@ -12,7 +12,7 @@ class NodeGridListPage extends React.Component{
 
 	getData = () => {
 		$.ajax({
-			url:'http://localhost:3000/data',
+			url:'http://localhost:3000/node',
 			type:'GET',
 			datatype:'JSON',
 			success: function(data){

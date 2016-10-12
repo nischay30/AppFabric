@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import TextField from 'material-ui/TextField';
-import Divider from 'material-ui/Divider'; 
-import Paper from 'material-ui/Paper';
+import Divider from 'material-ui/Divider';
+import ArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
 import RaisedButton from 'material-ui/RaisedButton';
 import {Link} from 'react-router';
 
@@ -9,8 +9,11 @@ class ServiceReplicationInstances extends React.Component
 {
 	render(){
 
-		return(<div className='row'  >
+		return(<div className='row'>
 			<div className='col-xs-12 col-lg-12 col-sm-12'>
+			<Link to='/'>
+			<ArrowBack color='#F44336' hoverColor='#4CAF50' style={{height:'50px',width:'50px'}} />
+			</Link>
 			<div className='row center-xs'>
 			<h2>ServiceName</h2>
 			</div>

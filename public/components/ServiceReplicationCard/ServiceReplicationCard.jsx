@@ -33,7 +33,7 @@ class ServiceReplicationCard extends React.Component
     <CardHeader
     title={this.props.mappedData.name}
     titleStyle={{fontSize:'24px'}}
-    avatar={<Badge badgeContent={10} primary={true} badgeStyle={{right:'10px'}}/>}
+    avatar={<Badge badgeContent={''} primary={true} badgeStyle={{background:'#4CAF50',right:'10px'}}/>}
     style={{fontWeight:'bold',background:'lightGrey'}}
     />
     <CardText expandable={true}>

@@ -14,10 +14,9 @@ class AppCard extends React.Component
     if(i==7)
       i=0;
   const style = {
-   height: 100,
    width: 300,
    margin: 50,
-   fontSize:30,
+   fontSize:25,
    textAlign: 'center',
    display: 'inline-block',
    backgroundColor:colour[i]

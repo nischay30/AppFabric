@@ -2,43 +2,43 @@
   "app": [
     {
       "id": 1,
-      "name": "Java"
+      "name": "Samarth"
     },
     {
       "id": 2,
-      "name": "C"
+      "name": "Tattva"
     },
     {
       "id": 3,
-      "name": ".net"
+      "name": "DataMill"
     },
     {
       "id": 4,
-      "name": "React"
+      "name": "QuizRT"
     },
     {
       "id": 5,
-      "name": "Angular"
+      "name": "Samarth Sahayak"
     },
     {
       "id": 6,
-      "name": "Angular2"
+      "name": "Tattav 1 "
     },
     {
       "id": 7,
-      "name": "Struts"
+      "name": "Tattava 2"
     },
     {
       "id": 8,
-      "name": "Struts2"
+      "name": "Tattava 3"
     },
     {
       "id": 9,
-      "name": "Struts2"
+      "name": "Datamill1"
     },
     {
       "id": 10,
-      "name": "Strs2"
+      "name": "Datamill2"
     }
   ],
   "node": [

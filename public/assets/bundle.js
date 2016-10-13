@@ -128,10 +128,10 @@
 							_react2.default.createElement(
 								_reactRouter.Router,
 								{ history: _reactRouter.browserHistory },
-								_react2.default.createElement(_reactRouter.Route, { path: '/a', component: _Apps2.default }),
+								_react2.default.createElement(_reactRouter.Route, { path: '/', component: _Apps2.default }),
 								_react2.default.createElement(_reactRouter.Route, { path: '/services', component: _Services2.default }),
 								_react2.default.createElement(_reactRouter.Route, { path: '/services/replication', component: _Replications2.default }),
-								_react2.default.createElement(_reactRouter.Route, { path: '/', component: _NodeDashBoardPage2.default }),
+								_react2.default.createElement(_reactRouter.Route, { path: '/nodedashboardpage', component: _NodeDashBoardPage2.default }),
 								_react2.default.createElement(_reactRouter.Route, { path: '/nodedashboardpage/nodegridlist', component: _NodeGridListPage2.default }),
 								_react2.default.createElement(_reactRouter.Route, { path: '/nodedashboardpage/nodecontainerlist', component: _NodeContainerPage2.default })
 							)
@@ -55840,7 +55840,7 @@
 	        null,
 	        _react2.default.createElement(
 	          _reactRouter.Link,
-	          { to: '/services', style: { textDecoration: 'none', width: '200px' } },
+	          { to: '/services', style: { textDecoration: 'none', width: '100%' } },
 	          _react2.default.createElement(
 	            _Paper2.default,
 	            { zDepth: 3, style: style },

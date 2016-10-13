@@ -8,6 +8,7 @@ import Replications from './views/Replications';
 import Apps from './views/Apps';
 import NodeDashBoardPage from './views/NodeDashBoardPage';
 import NodeGridListPage from './views/NodeGridListPage';
+import NodeContainerPage from './views/NodeContainerPage';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import Flex from '../node_modules/flexboxgrid/css/flexboxgrid.css';
@@ -21,15 +22,15 @@ class App extends React.Component{
 			<div>
 			<MuiThemeProvider>
 			<div>
-			<Router history={hashHistory}>
+			<Router history={browserHistory}>
 			<Route path='/' component={Apps}/>
 
 			<Route path='/services' component={Services} />
 			<Route path='/services/replication' component={Replications} />
-			
-			
+
 			<Route path='/nodedashboardpage' component={NodeDashBoardPage} />
 			<Route path='/nodedashboardpage/nodegridlist' component={NodeGridListPage} />
+			<Route path='/nodedashboardpage/nodecontainerlist' component={NodeContainerPage} />
 			
 			
 			</Router>

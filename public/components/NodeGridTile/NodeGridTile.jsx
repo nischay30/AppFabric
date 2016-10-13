@@ -12,7 +12,7 @@ import Toggle from 'material-ui/Toggle';
 class NodeGridTile extends React.Component{
 	state = {
     open: false,
-    expanded: true
+    expanded: false
   };
 
   handleOpen = () => {
@@ -34,6 +34,7 @@ class NodeGridTile extends React.Component{
      <GridTile 
      title={this.props.tile.title} 
      subtitle={<span>IP <b>{this.props.tile.author}</b></span>}
+     style={{marginLeft:'30px'}}
      actionIcon={<div>
       <ActionInfoOutline 
       onTouchTap={this.handleOpen} 
@@ -50,7 +51,9 @@ class NodeGridTile extends React.Component{
      <br />
      <RaisedButton label="Close" secondary={true} onTouchTap={this.handleClose} />
      </Dialog>
-     </GridTile>);
+     <img src="components/NodeGridTile/SystemsNode3.jpg" width="100%" height="100%" />
+     </GridTile>
+     );
   }
 };
 export default NodeGridTile;

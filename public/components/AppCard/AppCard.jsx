@@ -26,9 +26,9 @@ class AppCard extends React.Component
 return(
 
 <span>
-    <Link to='/services' style={{textDecoration:'none',width:'200px'}}>
+    <Link to='/services' style={{textDecoration:'none',width:'100%'}}>
 
-  <Paper zDepth={3} style={style}>
+  <Paper zDepth={3} style={style} >
   <h3>{this.props.value.name}</h3>
   </Paper>
   </Link>

@@ -1,13 +1,14 @@
-import React,{Component} from 'react';
+import React from 'react';
 import AppBar from 'material-ui/AppBar';
 
-class HomeAppBar extends React.Component{
-	render(){
+class HomeAppBar extends React.Component {
+	render() {
 		return(
 			<AppBar
-			title="App Fabric"
+			title="React Boilerplate"
 			iconClassNameRight="muidocs-icon-navigation-expand-more"
-			/>);
+			/>
+			);
 	}
 };
 
